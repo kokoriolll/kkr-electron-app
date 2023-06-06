@@ -9,8 +9,25 @@ const count = ref(0)
 <template>
   <h1>{{ msg }}</h1>
 
+  <p>
+    <a-space size="large">
+      <a-avatar>A</a-avatar>
+      <a-avatar :style="{ backgroundColor: '#3370ff' }">
+        <IconUser />
+      </a-avatar>
+      <a-avatar :style="{ backgroundColor: '#14a9f8' }">Arco</a-avatar>
+      <a-avatar :style="{ backgroundColor: '#00d0b6' }">Design</a-avatar>
+      <a-avatar>
+        <img
+            alt="avatar"
+            src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+        />
+      </a-avatar>
+    </a-space>
+  </p>
+
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <a-button type="primary" @click="count++">count is {{ count }} </a-button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
@@ -25,7 +42,7 @@ const count = ref(0)
   </p>
   <p>
     Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>

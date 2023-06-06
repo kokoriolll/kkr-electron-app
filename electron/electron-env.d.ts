@@ -2,8 +2,19 @@
 
 declare namespace NodeJS {
   interface ProcessEnv {
-    VSCODE_DEBUG?: 'true'
-    DIST_ELECTRON: string
+    /**
+     * The built directory structure
+     *
+     * ```tree
+     * ├─┬─┬ dist
+     * │ │ └── index.html
+     * │ │
+     * │ ├─┬ dist-electron
+     * │ │ ├── main.js
+     * │ │ └── preload.js
+     * │
+     * ```
+     */
     DIST: string
     /** /dist/ or /public/ */
     PUBLIC: string

@@ -1,37 +1,37 @@
 {
-  "name": "electron-vue-vite",
-  "version": "2.0.0",
-  "main": "dist-electron/main/index.js",
-  "description": "Really simple Electron + Vue + Vite boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
-  "license": "MIT",
+  "name": "electron-vite-project",
   "private": true,
-  "keywords": [
-    "electron",
-    "rollup",
-    "vite",
-    "vue3",
-    "vue"
-  ],
-  "debug": {
-    "env": {
-      "VITE_DEV_SERVER_URL": "http://127.0.0.1:3344/"
-    }
-  },
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build && electron-builder",
+    "build": "vue-tsc && vite build && electron-builder",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.1.0",
-    "electron": "^25.0.1",
-    "electron-builder": "^23.6.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.1.4",
-    "vite-plugin-electron": "^0.11.2",
-    "vite-plugin-electron-renderer": "^0.14.1",
+  "dependencies": {
+    "@arco-design/web-vue": "^2.47.0",
+    "pinia": "^2.1.3",
+    "pinia-plugin-persist": "^1.0.0",
     "vue": "^3.2.47",
-    "vue-tsc": "^1.2.0"
-  }
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/eslint-config-airbnb": "^7.0.0",
+    "electron": "^24.4.0",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.42.0",
+    "eslint-plugin-vue": "^9.14.1",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.2",
+    "vite-plugin-electron": "^0.11.2",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "vue-tsc": "^1.4.2"
+  },
+  "main": "dist-electron/main.js"
 }
