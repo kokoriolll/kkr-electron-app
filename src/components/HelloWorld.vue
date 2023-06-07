@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
   <p>
     <a-space size="large">
       <a-avatar>A</a-avatar>
@@ -19,8 +18,8 @@ const count = ref(0)
       <a-avatar :style="{ backgroundColor: '#00d0b6' }">Design</a-avatar>
       <a-avatar>
         <img
-            alt="avatar"
-            src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+          alt="avatar"
+          src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
         />
       </a-avatar>
     </a-space>
@@ -36,8 +35,10 @@ const count = ref(0)
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
+    <a
+      href="https://vuejs.org/guide/quick-start.html#local"
+      target="_blank"
+    >create-vue</a
     >, the official Vue + Vite starter
   </p>
   <p>

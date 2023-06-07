@@ -23,6 +23,8 @@
     "electron": "^24.4.0",
     "electron-builder": "^23.6.0",
     "eslint": "^8.42.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-vue": "^9.14.1",
     "sass": "^1.62.1",
     "typescript": "^5.0.2",

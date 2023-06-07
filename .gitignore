@@ -1,3 +1,20 @@
+node_modules
+dist
+dist-ssr
+*.local
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+.VSCodeCounter
+stats.html
+build.time
+
+.turbo
+.eslintrc-auto-import.json
+auto-imports.d.ts
+components.d.ts
+
+
 # Logs
 logs
 *.log
@@ -7,16 +24,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-dist-electron
-release
-*.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -24,3 +33,4 @@ release
 *.njsproj
 *.sln
 *.sw?
+coverage
