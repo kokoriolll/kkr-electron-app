@@ -21,6 +21,7 @@ module.exports = {
     'import/resolver': {
       typescript: {},
     },
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
   parserOptions: {
     ecmaVersion: 'latest',
@@ -32,8 +33,7 @@ module.exports = {
     'vue',
   ],
   rules: {
-    // 'import/no-unresolved': 'off',
-    // 'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
