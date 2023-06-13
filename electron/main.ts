@@ -1,4 +1,6 @@
-import { app, BrowserWindow } from 'electron';
+import {
+  app, BrowserWindow, Tray, Menu, ipcMain,
+} from 'electron';
 import path from 'node:path';
 
 // The built directory structure
@@ -41,6 +43,15 @@ function createWindow() {
     win.loadFile(path.join(process.env.DIST, 'index.html'));
   }
 }
+
+let tray = null;
+
+app.on('ready', async () => {
+  tray = new Tray('./public/vite');
+  ipcMain.on('toolTipDesc', async () => {
+
+  });
+});
 
 app.on('window-all-closed', () => {
   win = null;
