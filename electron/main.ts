@@ -29,7 +29,7 @@ function createWindow() {
     },
   });
 
-  win.removeMenu();
+  // win.removeMenu();
 
   // Test active push message to Renderer-process.
   win.webContents.on('did-finish-load', () => {
@@ -47,10 +47,11 @@ function createWindow() {
 let tray = null;
 
 app.on('ready', async () => {
-  tray = new Tray('./public/vite');
-  ipcMain.on('toolTipDesc', async () => {
-
-  });
+  tray = new Tray(path.join(process.env.PUBLIC, 'tray.png'));
+  tray.setToolTip('KKR_Electron_App')
+  tray.on('click', () => {
+    win?.show()
+  })
 });
 
 app.on('window-all-closed', () => {
