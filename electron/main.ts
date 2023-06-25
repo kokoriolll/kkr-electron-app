@@ -1,5 +1,5 @@
 import {
-  app, BrowserWindow, Tray, Menu, ipcMain,
+  app, BrowserWindow, Tray,
 } from 'electron';
 import path from 'node:path';
 
@@ -23,7 +23,7 @@ function createWindow() {
   win = new BrowserWindow({
     width: 1024,
     height: 768,
-    icon: path.join(process.env.PUBLIC, 'electron-vite.svg'),
+    icon: path.join(process.env.PUBLIC, 'tray.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -48,10 +48,10 @@ let tray = null;
 
 app.on('ready', async () => {
   tray = new Tray(path.join(process.env.PUBLIC, 'tray.png'));
-  tray.setToolTip('KKR_Electron_App')
+  tray.setToolTip('KKR_Electron_App');
   tray.on('click', () => {
-    win?.show()
-  })
+    win?.show();
+  });
 });
 
 app.on('window-all-closed', () => {
